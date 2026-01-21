@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>醒言</title>
+</head>
+<style>
+    /* 全局重置样式，清除默认内外边距 */
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* 页面主体样式 */
+    body{
+        background: url("https://bing.img.run/rand_uhd.php"); /* 背景图片 */
+        background-size: cover; /* 背景图片覆盖整个屏幕 */
+        background-attachment: fixed; /* 背景图片固定，不随滚动移动 */
+        margin-top: 2%; /* 页面顶部边距 */
+    }
+    
+    /* 主容器样式 */
+    .container{
+        width: 50vw; /* 宽度为视窗宽度的50% */
+        margin: 0 auto; /* 水平居中 */
+        background: rgb(255, 255, 255,0.5); /* 半透明白色背景 */
+        backdrop-filter: blur(10px); /* 背景模糊效果 */
+        border-radius: 15px; /* 圆角边框 */
+        overflow: hidden; /* 溢出内容隐藏 */
+    }
+    
+    /* 顶部图片容器 */
+    .top-container{
+        width: 100%; /* 宽度100% */
+        display: flex; /* 使用弹性布局 */
+        justify-content: center; /* 水平居中对齐 */
+    }
+
+    /* 顶部图片样式 */
+    .top{
+        width: 80%; /* 每张图片占20%宽度 */
+        height: 288px; /* 固定高度 */
+        object-fit: contain; /* 图片等比例填充 */
+        margin-top: 5%; /* 顶部边距 */
+        transition: all 1s ease-in-out; /* 过渡动画效果 */
+    }
+    
+    /* 表格样式 */
+    .content{
+        width: 80%; /* 表格宽度 */
+        border-collapse: separate; /* 边框分离模式（重要：用于实现圆角） */
+        border-spacing: 0; /* 单元格间距为0 */
+        margin: 20px auto 0; /* 20px上边距，水平居中 */
+        border: 2px solid #1e9fff; /* 表格边框 */
+        border-radius: 10px; /* 表格圆角 */
+        overflow: hidden; /* 溢出内容隐藏（确保圆角生效） */
+    }
+    
+    /* 表格单元格样式 */
+    .content th, .content td{
+        padding: 5px; /* 单元格内边距 */
+        text-align: center; /* 文本居中 */
+        border: 2px solid #1e9fff; /* 单元格边框 */
+        border-top: none; /* 移除上边框（避免双边框） */
+        border-left: none; /* 移除外边框（避免双边框） */
+    }
+    
+    /* 第一个单元格移除左边框 */
+    .content th:first-child,
+    .content td:first-child{
+        border-left: none;
+    }
+    
+    /* 第一行表头移除上边框 */
+    .content tr:first-child th{
+        border-top: none;
+    }
+    .footer{
+        width: 80%;
+        margin: 20px auto 0;
+        text-align: center;
+    }
+    @media (max-width:768px){
+        .container{
+            width: 90vw;
+        }
+        .top{
+            height: 100px;
+        }
+        body{
+            margin-top: 15vh;
+        }
+    }
+</style>
+<body>
+    <div class="container"> <!-- 主容器 -->
+        <div class="top-container">
+            <!-- 中间图片 -->
+            <img src="https://count.getloli.com/@kx9007-saying?name=random-saying&theme=random&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" alt="" class="top">
+        </div>
+        
+        <table class="content"> <!-- 表格 -->
+            <thead> <!-- 表头 -->
+                <tr>
+                    <th>参数</th> <!-- 表头单元格 -->
+                    <th>描述</th>
+                    <th>示例</th>
+                    <th>必须</th>
+                </tr>
+            </thead>
+            <tbody> <!-- 表格主体 -->
+                <tr> <!-- 表格行 -->
+                    <td> <!-- 表格单元格 -->
+                        type
+                    </td>
+                    <td>
+                        返回类型 json/text
+                    </td>
+                    <td>
+                        api.php?type=json
+                    </td>
+                    <td>
+                        否 默认text
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        number
+                    </td>
+                    <td>
+                        获取第几条
+                    </td>
+                    <td>
+                        api.php?number=1
+                    </td>
+                    <td>
+                        否 默认随机
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        txt
+                    </td>
+                    <td>
+                        指定文本内容
+                    </td>
+                    <td>
+                        api.php?text=心灵鸡汤
+                    </td>
+                    <td>
+                        否 默认随机
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer">
+            <img onclick="window.location.href='https://github.com/kx9007/Rand-Saying'" src="https://camo.githubusercontent.com/add047372b66b72c90bf7bda61bf0f9e23a749eadb573bdc494697b6550e2dca/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f73756e3032323553554e2f73756e3032323553554e2f6173736574732f696d616765732f6769746875622e77656270" alt="" width="20%">
+            <img onclick="window.location.href='https://life.kxlove.top'" src="https://camo.githubusercontent.com/e6741c78eda4ed3bcdf44138034f986f4a2fdc219361a625583b25481dace019/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f73756e3032323553554e2f73756e3032323553554e2f6173736574732f696d616765732f68746d6c2e77656270" alt="" width="20%">
+            <img onclick="window.location.href='mailto:kuxia9007@qq.com'"  src="https://camo.githubusercontent.com/d2d8dcc68688032479eca31d5729f64a696d098688b741beac25f806860153bf/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f73756e3032323553554e2f73756e3032323553554e2f6173736574732f696d616765732f6373736769662e77656270" alt="" width="20%">
+            <img onclick="window.location.href='https://github.com/kx9007'" src="https://camo.githubusercontent.com/efb82778b8ffbd24804d371180f159511ac14e21ef8c6c21c08a22c5de47e921/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f73756e3032323553554e2f73756e3032323553554e2f6173736574732f696d616765732f6a732e77656270" alt="" width="20%">
+        </div>
+    </div>
+</body>
+</html>
